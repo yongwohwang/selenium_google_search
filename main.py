@@ -14,6 +14,7 @@ class GoogleKeywordSCreenshooter:
     def __init__(self,keyword,max_page,screenshots_dir):
         options = Options()
         options.add_argument("window-size=1400,600")
+        options.add_argument("--headless")
         self.browser = webdriver.Chrome(ChromeDriverManager().install(), options = options)
         self.browser.get("https://google.com")
         self.keyword = keyword
